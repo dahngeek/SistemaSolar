@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Raleway-Bold';
+    src: url('fonts/Raleway-Bold.eot');
+    src: url('fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Raleway-Bold.woff') format('woff'),
+         url('fonts/Raleway-Bold.ttf') format('truetype'),
+         url('fonts/Raleway-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Raleway-Regular';
+    src: url('fonts/Raleway-Regular.eot');
+    src: url('fonts/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Raleway-Regular.woff') format('woff'),
+         url('fonts/Raleway-Regular.ttf') format('truetype'),
+         url('fonts/Raleway-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+	font-family: 'Raleway-Regular', Arial, Verdana;
+}
+#controles {
+	background: #fff;
+	border-bottom: 3px solid #47d4ff;
+	padding: 0px;
+}
+#controles input {
+	background: #fcfcfc;
+	border: none;
+	outline: none;
+	margin: 0px;
+	font-family: 'Raleway-Regular', Arial, Verdana;
+	font-size: 100%;
+}
+#controles input#solar {
+	font-family: 'Raleway-Bold', Arial, Verdana;
+}
+#controles input:hover{
+	background: #47d4ff;
+	border: none;
+	outline: none;
+}
+#cameracontrols input {
+	background: #fff;
+		border: none;
+	outline: none;
+	padding: 5px;
+}
+#cameracontrols input:hover {
+	background: #47d4ff;
+		border: none;
+	outline: none;
+}
+#contenido {
+	position: absolute;
+	left: 0px;
+	top: 40px;
+	background: rgba(255,255,255,1);
+	min-height: 60px;
+	width: 30%;
+	border-bottom: 5px solid #47d4ff;
+	padding: 10px;
+}
+#contenido p {
+	font-family: 'Raleway-Regular', Arial, Verdana;
+}
+#contenido b, #contenido h1 {
+	font-family: 'Raleway-Bold', Arial, Verdana;
+}
+#contenido #cierra {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	cursor:pointer;
+}
+#masinfo {
+	position: absolute;
+	left: 5px;
+	top: 45px;
+	background: rgba(255,255,255,1);
+	border-bottom: 3px solid #47d4ff;
+	padding: 5px;
+	cursor:pointer;
+}
