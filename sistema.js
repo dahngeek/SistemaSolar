@@ -1,3 +1,9 @@
+//Desarrollado por Daniel Xutuc (dahngeek)
+//twitter: @dahngeek
+//Website: dahngeek.com
+//Iniciamos el Sistema.
+//Estado Caja es para saber si está extendido u oculta la caja de información.
+
 var estadocaja = true;
 jQuery(document).ready(function($){
 	$("#masinfo").click(function(){
