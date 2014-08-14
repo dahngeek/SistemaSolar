@@ -431,6 +431,7 @@ document.getElementById('menosy').addEventListener('click',function() {
 			$("#contenido").slideUp();
 			$("#TierraPl").delay(900).fadeIn("slow");
 	},false);
+	// Mejorar esta parte por que esya super desperdicio de código
 	document.getElementById('sol').addEventListener('click',function() {
 			planetaactivo = true;
 			planetaabuscar = solMesh;
