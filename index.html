@@ -25,7 +25,15 @@ MMMM. .MMM+..MMMN. DMMM. =MMM . MMM...MMM  .MMM, .MMMZ. NMMM. $MMM...MMM ..MMMMM
 MMMMM.MMMMM7MMMMMMMMMMMM=MMMMM.MMMMM MMMMM.MMMMM:MMMMMMMMMMMMNMMMMM,MMMMM MMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
 MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
-MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=-me@dahngeek.com-->
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=-me@dahngeek.com
+            .---._------------------------------+
+___________/ ._____)                            |
+              ) __|          HECHO POR          |
+                __| http://www.dahngeek.com     |
+..---------.._____|                             |
+                  +-----------------------------+
+Diseño Web y Desarrollo para Wordpress por Daniel Xutuc @dahngeek
+-->
 <meta name="description" content="Pequeña simulación Tridimencional de un Sistema Solar con tamaños a Escala realizada con WebGL gracias a THREEjs, Navegación interplanetaria.">
 <meta name="keywords" content="Sistema,Solar,WebGL,Nasa,escala">
 <meta name="author" content="Daniel Xutuc (dahngeek)">
@@ -41,22 +49,22 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=-me@dahngeek.com-
 <body style='margin: 0px; background-color: #000; overflow: hidden;'>
 	<div id="controles" style="position: absolute; top: 5px; left: 10px:">
 		<input type="button" id="solar" value="Sistema Solar">
-		<input type="button" id="sol" value="Sol">
-		<input type="button" id="mercurio" value="Mercurio">
-		<input type="button" id="venus" value="Venus">
-		<input type="button" id="tierra" value="Tierra">
-		<input type="button" id="marte" value="Marte">
-		<input type="button" id="jupiter" value="Jupiter">
-		<input type="button" id="saturno" value="Saturno">
-		<input type="button" id="urano" value="Urano">
-		<input type="button" id="neptuno" value="Neptuno">
+		<input type="button" title="(0)" id="sol" value="Sol">
+		<input type="button" title="(1)" id="mercurio" value="Mercurio">
+		<input type="button" title="(2)" id="venus" value="Venus">
+		<input type="button" title="(3)" id="tierra" value="Tierra">
+		<input type="button" title="(4)" id="marte" value="Marte">
+		<input type="button" title="(5)" id="jupiter" value="Jupiter">
+		<input type="button" title="(6)" id="saturno" value="Saturno">
+		<input type="button" title="(7)" id="urano" value="Urano">
+		<input type="button" title="(8)" id="neptuno" value="Neptuno">
 		
 	</div>
 	<div id="cameracontrols" style="position:absolute; bottom:20px; right: 20px;">
-		<input type="button" id="zoommas" value="+"></input>
-		<input type="button" id="zoommenos"  value="-"></input>
-		<input type="button" id="menosy"  value="&uarr;"></input>
-		<input type="button" id="masy" value="&darr;"></input>
+		<input type="button" title="(M)" id="zoommas" value="+"></input>
+		<input type="button" title="(N)" id="zoommenos"  value="-"></input>
+		<input type="button" title="(FLECHA ARRIBA)" id="menosy"  value="&uarr;"></input>
+		<input type="button" title="(FLECHA ABAJO)" id="masy" value="&darr;"></input>
 	</div>
 	<span id="masinfo" style="display:none;">Información +</span>
 	<div id="contenido" style="display:block;">
@@ -159,5 +167,8 @@ MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM=-me@dahngeek.com-
 			<p><b>Radio medio:</b>1,151 km = 0.18 Tierras</p>
 		</div>
 	</div>
+	<div id="textoflotante">
+			<p id="textoCambia" style="display:none;">Yendo a Marte...</p>
+		</div>
 <script type="text/javascript" src="sistema.js"></script>
 </body>

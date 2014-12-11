@@ -1,9 +1,10 @@
 //Desarrollado por Daniel Xutuc (dahngeek)
 //twitter: @dahngeek
 //Website: dahngeek.com
-//Iniciamos el Sistema.
-//Estado Caja es para saber si está extendido u oculta la caja de información.
 
+//Iniciamos el Sistema.
+
+//Estado Caja es para saber si está extendido u oculta la caja de información.
 var estadocaja = true;
 jQuery(document).ready(function($){
 	$("#masinfo").click(function(){
@@ -398,7 +399,7 @@ document.getElementById('menosy').addEventListener('click',function() {
 				camaraaay = camera.position.y + 0.001;
 	},false);
 	//////////   DEFINIMOS LOS DE PLANETAS ////////////
-	document.addEventListener( 'keydown', function ( event ) {
+	document.addEventListener( 'keyup', function ( event ) {
 				switch ( event.keyCode ) {
 
 					case 8: // prevent browser back 
@@ -417,7 +418,33 @@ document.getElementById('menosy').addEventListener('click',function() {
 					case 40:
 						camaraaay = camera.position.y - 0.001;
 						break;
-					
+					case 48:
+						$("#sol").click();
+						break;
+					case 49:
+						$("#mercurio").click();
+						break;
+					case 50:
+						$("#venus").click();
+						break;
+					case 51:
+						$("#tierra").click();
+						break;
+					case 52:
+						$("#marte").click();
+						break;
+					case 53:
+						$("#jupiter").click();
+						break;
+					case 54:
+						$("#saturno").click();
+						break;
+					case 55:
+						$("#urano").click();
+						break;
+					case 56:
+						$("#neptuno").click();
+						break;
 				}
 
 			} );
@@ -426,67 +453,90 @@ document.getElementById('menosy').addEventListener('click',function() {
 	var planetaabuscar;
 	document.getElementById('tierra').addEventListener('click',function() {
 			planetaactivo = true;
-			planetaabuscar = earthMesh;
-			$(".planeta").fadeOut("slow");
+			if (planetaabuscar == earthMesh) {} else {
 			$("#contenido").slideUp();
+			$(".planeta").fadeOut("slow");
 			$("#TierraPl").delay(900).fadeIn("slow");
+			}
+			planetaabuscar = earthMesh;
 	},false);
 	// Mejorar esta parte por que esya super desperdicio de código
 	document.getElementById('sol').addEventListener('click',function() {
 			planetaactivo = true;
+			if (planetaabuscar == solMesh) {} else {
+				$(".planeta").fadeOut("slow");
+				$("#contenido").slideUp();
+				$("#SolPl").delay(900).fadeIn("slow");
+			}
 			planetaabuscar = solMesh;
-			$(".planeta").fadeOut("slow");
-			$("#contenido").slideUp();
-			$("#SolPl").delay(900).fadeIn("slow");
 	},false);
 	document.getElementById('mercurio').addEventListener('click',function() {
 			planetaactivo = true;
-			planetaabuscar = meshMerc;
+			
+			if (planetaabuscar == meshMerc) {} else {
 			$(".planeta").fadeOut("slow");
 			$("#contenido").slideUp();
 			$("#MercurioPl").delay(900).fadeIn("slow");
+			}
+			planetaabuscar = meshMerc;
 	},false);
 	document.getElementById('venus').addEventListener('click',function() {
 			planetaactivo = true;
-			planetaabuscar = venusMesh;
+			if (planetaabuscar == venusMesh) {} else {
 			$(".planeta").fadeOut("slow");
 			$("#contenido").slideUp();
 			$("#VenusPl").delay(900).fadeIn("slow");
+			}
+			planetaabuscar = venusMesh;
 	},false);
 	document.getElementById('marte').addEventListener('click',function() {
 			planetaactivo = true;
-			planetaabuscar = marteMesh;
+			
+			if (planetaabuscar == marteMesh) {} else {
 			$(".planeta").fadeOut("slow");
 			$("#contenido").slideUp();
 			$("#MartePl").delay(900).fadeIn("slow");
+			}
+			planetaabuscar = marteMesh;
 	},false);
 	document.getElementById('jupiter').addEventListener('click',function() {
 			planetaactivo = true;
-			planetaabuscar = jupiterMesh;
+			
+			if (planetaabuscar == jupiterMesh) {} else {
 			$(".planeta").fadeOut("slow");
 			$("#contenido").slideUp();
 			$("#JupiterPl").delay(900).fadeIn("slow");
+			}
+		planetaabuscar = jupiterMesh;
 	},false);
 	document.getElementById('saturno').addEventListener('click',function() {
 			planetaactivo = true;
-			planetaabuscar = saturnoMesh;
+			if (planetaabuscar == saturnoMesh) {} else {
 			$(".planeta").fadeOut("slow");
 			$("#contenido").slideUp();
 			$("#SaturnoPl").delay(900).fadeIn("slow");
+			}
+			planetaabuscar = saturnoMesh;
 	},false);
 	document.getElementById('urano').addEventListener('click',function() {
 			planetaactivo = true;
-			planetaabuscar = uranoMesh;
+			
+			if (planetaabuscar == uranoMesh) {} else {
 			$(".planeta").fadeOut("slow");
 			$("#contenido").slideUp();
 			$("#UranoPl").delay(900).fadeIn("slow");
+			}
+			planetaabuscar = uranoMesh;
 	},false);
 		document.getElementById('neptuno').addEventListener('click',function() {
 			planetaactivo = true;
-			planetaabuscar = neptunoMesh;
+			
+			if (planetaabuscar == neptunoMesh) {} else {
 			$(".planeta").fadeOut("slow");
 			$("#contenido").slideUp();
 			$("#NeptunoPl").delay(900).fadeIn("slow");
+			}
+			planetaabuscar = neptunoMesh;
 	},false);
 
 	
@@ -518,11 +568,37 @@ document.getElementById('menosy').addEventListener('click',function() {
 				var valorabs = Math.abs(planetaabuscar.position.x - camera.position.x);
 				posicionpl = planetaabuscar.position.x;
 				//console.log("pab pos:"+posicionpl+"cp:"+camera.position.x);
+				var planetaaIr;
+				if (planetaabuscar == meshMerc) {
+					planetaaIr = "Mercurio";
+				} else if (planetaabuscar==earthMesh){
+					planetaaIr = "Tierra";
+				} else if (planetaabuscar==uranoMesh) {
+					planetaaIr = "Urano";
+				}else if (planetaabuscar==marteMesh) {
+					planetaaIr = "Marte";
+				}else if (planetaabuscar==solMesh) {
+					planetaaIr = "Sol";
+				}else if (planetaabuscar==venusMesh) {
+					planetaaIr = "Venus";
+				}else if (planetaabuscar==neptunoMesh) {
+					planetaaIr = "Neptuno";
+				}else if (planetaabuscar==saturnoMesh) {
+					planetaaIr = "Saturno";
+				}else if (planetaabuscar==jupiterMesh) {
+					planetaaIr = "Júpiter";
+				} else {
+					planetaaIr = "Planeta";
+				}
+				$("#textoCambia").text("Yendo a "+planetaaIr);
+				$("#textoCambia").fadeIn();
 				if(valorabs < 0.01){
 					camera.position.x = posicionpl;
 					planetaactivo = false;
 					if(estadocaja){
-					$("#contenido").slideDown();} else {}
+					$("#contenido").slideDown();
+					$("#textoCambia").fadeOut();
+				} else {}
 					//camera.position.z = camaraaaz;
 					//console.log("estamos a a"+planetaabuscar);
 				}else{
