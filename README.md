@@ -2,7 +2,7 @@ SistemaSolar
 ============
 
 Un sistema solar en 3D interactivo hecho con three.js
-DEMO: http://dahngeek.com/SistemaSolar/
+DEMO: http://dahngeek.github.io/SistemaSolar/
 
 Todas las distancias estan a tamaño escala (en UA)
 cada planeta tiene tamaño escala (10*UA)
